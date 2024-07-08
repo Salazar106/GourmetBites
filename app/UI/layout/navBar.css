@@ -1,0 +1,6 @@
+#imgNavBar{
+    background-image: url(../../../public/imgs/ensayis.jpg);
+    background-size: cover; /* Ajusta la imagen al tamaño del div */
+    background-position: bottom; /* Centra la imagen */
+}
+

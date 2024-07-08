@@ -1,0 +1,7 @@
+.bg-contact{
+    background-image: url('../../../../public/imgs/Contact.png');
+    background-size:auto; /* Esto asegura que la imagen tome su tamaño natural */
+    background-repeat: no-repeat; /* Esto asegura que la imagen no se repita */
+    background-position: center; 
+}
+
