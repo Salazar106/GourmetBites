@@ -1,3 +1,7 @@
+import { Component } from "react";
+
+
+
 export const formatCurrency = (value: number) => {
     return value.toLocaleString("es-CO", {
         style: "currency",
@@ -6,3 +10,7 @@ export const formatCurrency = (value: number) => {
         maximumFractionDigits: 0,
     });
 };
+
+
+
+

@@ -7,11 +7,14 @@ import Cart from "../UI/portafolio/car";
 export default function CatalogPage(){
 
     return (
-        <CartProvider>
-            <Cart/>
+        // <CartProvider>
+        <div>
+
+            {/* <Cart/> */}
             <div>
                 <SellCard data={productData}/>
             </div>
-        </CartProvider>
+        </div>
+        // </CartProvider>
     )
 }

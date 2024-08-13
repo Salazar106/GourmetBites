@@ -8,6 +8,7 @@ import "./navBar.css"
 import { usePathname } from 'next/navigation';
 import clsx from "clsx";
 import NavDropdown from "./navDropDown";
+import Cart from "../portafolio/car";
 
 export const NavBar = () => {
 
@@ -76,6 +77,8 @@ export const NavBar = () => {
                             </Link>
                         </NavbarItem>
                     ))}
+                    <Cart/>
+
                     {/* <NavbarItem className="hidden lg:flex">
                     <Link href="#">Login</Link>
                 </NavbarItem>

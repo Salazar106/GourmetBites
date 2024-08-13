@@ -8,6 +8,7 @@ import ProductModal from "./modal";
 import { formatCurrency } from "@/app/Lib/generalFunction";
 import { useCartFunctions } from "@/app/Lib/catalog/cartFunctions";
 import { Product } from "whatsapp-web.js";
+import { ToastContainer } from "react-toastify";
 
 export const SellCard = ({ data }:any) => {
     const { addToCart } = useCartFunctions();
@@ -47,7 +48,7 @@ export const SellCard = ({ data }:any) => {
     return (
         <div className="flex flex-wrap gap-3 justify-center">
             {data.map((item: any, index: number) => (
-                <Card key={item.id} className="py-4 bg-white">
+                <Card key={item.id} className="py-4 bg-[#ecdcd0] shadow-lg">
                     <CardBody className="overflow-visible py-2 flex justify-center w-full">
                         <Image
                             isZoomed
@@ -82,10 +83,12 @@ export const SellCard = ({ data }:any) => {
                             className="w-full" 
                             color="primary" 
                             endContent={<FaCartPlus />}
-                            onClick={() => addToCart({ ...item, quantity: quantities[index] })}
+                            onClick={() => addToCart({ ...item, quantity: quantities[index] }) }
                         >
                             Agregar al carrito 
                         </Button>
+                        <ToastContainer />
+
                     </CardHeader>
                 </Card>
             ))}

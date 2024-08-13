@@ -24,7 +24,17 @@ const CartContext = createContext<{ state: CartState; dispatch: React.Dispatch<C
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case 'ADD_TO_CART':
-      return { ...state, cart: [...state.cart, action.payload] };
+      const existingProductIndex = state.cart.findIndex(item => item.id === action.payload.id);
+      if (existingProductIndex >= 0) {
+        const updatedCart = state.cart.map((item, index) => 
+          index === existingProductIndex 
+            ? { ...item, quantity: action.payload.quantity } 
+            : item
+        );
+        return { ...state, cart: updatedCart };
+      } else {
+        return { ...state, cart: [...state.cart, action.payload] };
+      }
     case 'REMOVE_FROM_CART':
       return { ...state, cart: state.cart.filter(item => item.id !== action.payload.id) };
     case 'UPDATE_QUANTITY':

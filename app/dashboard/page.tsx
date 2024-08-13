@@ -12,3 +12,4 @@ export default function DashboardPage() {
         <section>Dashboard Page</section>
     )
 }
+
