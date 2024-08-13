@@ -1,19 +1,14 @@
-import UserForm from "@/app/components/dashboard/users/userForm";
-import Modals from "@/app/components/gerenal/modal";
-import TableData from "@/app/components/gerenal/table/table";
-import { clientColumns, clientData } from "@/app/components/lib/client";
 
 export default function ClientsPage() {
 
     
     return (
         <section className="flex flex-col w-full h-full">
-            <div className="flex justify-end gap-10">
-                <Modals title="Create new Client" size="5xl" >
-                    <UserForm/>
-                </Modals>
+            <div className="flex flex-col w-full h-full">
+                <div className="flex flex-col w-full h-full">
+                    <h1 className="text-3xl font-bold">Clientes</h1>
+                </div>
             </div>
-            <TableData TableData={clientData} columns={clientColumns}/>
         </section>
     )
 }

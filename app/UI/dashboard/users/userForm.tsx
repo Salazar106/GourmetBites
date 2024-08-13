@@ -15,7 +15,7 @@ export default function UserForm() {
     };
 
 
-    const handleSubmit = async (values, { resetForm }) => {
+    const handleSubmit = async (values:any, { resetForm }:any) => {
         try {
             console.log(values);
             resetForm();
@@ -33,7 +33,7 @@ export default function UserForm() {
             .matches(/[0-9]/, 'Password must contain at least one number')
             .matches(/[\W_]/, 'Password must contain at least one special character'),
         confirmPassword: Yup.string()
-            .oneOf([Yup.ref('password'), null], 'Passwords must match')
+            .oneOf([Yup.ref('password')], 'Passwords must match')
             .required('Confirm Password is required')
     });
 
