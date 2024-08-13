@@ -44,7 +44,7 @@ export default function ContactUsForm() {
         transition={{ duration: 0.5 }}
         className="flex w-full flex-wrap  mb-6 md:mb-0 gap-4 bg-gray-100 rounded-lg p-4 shadow-xl px-5 mx-5"
       >
-        <div className="flex flex-wrap w-full justify-center md:gap-0  md:flex-nowrap  md:gap-10">
+        <div className="flex flex-wrap w-full justify-center   md:flex-nowrap  md:gap-10">
           <Input type="text" color='primary' variant="underlined" label="*Name" />
           <Input type="email" color='primary' variant="underlined" label="*Email" />
         </div>
