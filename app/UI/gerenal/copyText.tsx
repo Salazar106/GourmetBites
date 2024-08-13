@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export const CopyText = ({text}) => {
+export const CopyText = ({text}: {text: string}) => {
     const [copied, setCopied] = useState(false);
 
     const copyToClipboard = () => {
